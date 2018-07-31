@@ -10,7 +10,7 @@ let matches = [];
 
 const onTextChange = e => {
   setTimeout(() => {
-    pastedText = e.target.value;
+    pastedText = e.target.value.toLowerCase();
 
     // e.target.value.match(regex1)
     foundLogons = pastedText.match(regex1);
