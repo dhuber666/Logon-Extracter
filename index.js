@@ -37,7 +37,7 @@ const getSelectionText = () => {
 
   // else push the marked text into the array
   //   debugger;
-  text ? matches.push(text) : null;
+  text ? matches.push(text.trim()) : null;
   renderTextArea();
 };
 
