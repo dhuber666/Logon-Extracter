@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logon Extracter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="margin-bottom: 30px">Logon Extracter</h1>
+        <div class="form-group">
+            <label for="textArea">Füge Text mit Logons ein oder doppel klicke eingefügten Text:</label>
+            <textarea class="form-control" rows="4" id="textArea"></textarea>
+
+            <label for="output">Kopiere diesen Text zur weiteren verwendung</label>
+            <textarea class="form-control" rows="4" id="output"></textarea>
+
+            <script src="index.js"></script>
+            <div class="p-3 mb-2 bg-success text-white custom-footer">
+                <h5>Anleitung:</h5>
+                <p>Füge einen Text mit Logons ein. Diese werden anhand dem ersten Buchstaben der U Nr. und darauf folgenden
+                    Zahlen erkannt. Du kannst danach noch Text kopieren (zbsp Logons wie Huberdo), die das Script nicht erkennen
+                    um es ebenfalls der Liste hinzuzufügen. Dafür klicke einfach auf Text mit
+                    <bold>Doppelklick</bold>
+                </p>
+            </div>
+        </div>
+
+</body>
+
+</html>

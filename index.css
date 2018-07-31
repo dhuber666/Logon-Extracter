@@ -1,0 +1,17 @@
+body {
+  margin-top: 30px;
+}
+
+#textArea {
+  min-width: 300px;
+  min-height: 300px;
+}
+
+#output {
+  min-width: 300px;
+  min-height: 200px;
+}
+
+.custom-footer {
+  margin-top: 20px;
+}
