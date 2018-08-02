@@ -4,11 +4,18 @@ const output = document.getElementById("output");
 
 const download = document.getElementById("save");
 
+const revertBtn = document.getElementById("revert");
+
+revertBtn.style.display = "none";
+
 // matches just the value + paranthesis
 const regex1 = /[u+v+]\d+/g;
 
 // global array with matches
 let matches = [];
+
+// check if user has manually addedsomething
+let hasAdded = false;
 
 const onTextChange = e => {
   setTimeout(() => {
@@ -26,6 +33,7 @@ const onTextChange = e => {
 
 const getSelectionText = () => {
   var text = "";
+  hasAdded = true;
   if (window.getSelection) {
     text = window.getSelection().toString();
   } else if (document.selection && document.selection.type != "Control") {
@@ -43,9 +51,19 @@ const getSelectionText = () => {
   renderTextArea();
 };
 
+// Revert
+
+const revert = () => {
+  matches.pop();
+  renderTextArea();
+};
+
 const renderTextArea = () => {
   console.log(matches);
   output.value = matches.join("\n");
+  if (hasAdded) {
+    revertBtn.style.display = "inline-block";
+  }
 };
 
 // saving to file
@@ -78,3 +96,4 @@ download.addEventListener("click", () =>
 );
 textbox.addEventListener("dblclick", getSelectionText);
 textbox.addEventListener("paste", onTextChange);
+revertBtn.addEventListener("click", revert);
